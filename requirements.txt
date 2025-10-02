@@ -1,0 +1,16 @@
+# --- App backend (FastAPI) ---
+fastapi==0.118.0
+uvicorn[standard]==0.37.0
+python-multipart>=0.0.20
+python-dotenv==1.0.1
+requests==2.32.3
+
+# --- Vision / traitement image ---
+opencv-contrib-python-headless==4.10.0.84
+pillow==10.4.0
+numpy==1.26.4
+pytesseract==0.3.10
+
+# --- Front Streamlit ---
+streamlit==1.36.0
+streamlit-drawable-canvas==0.9.3
