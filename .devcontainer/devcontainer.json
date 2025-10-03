@@ -5,12 +5,10 @@
     "codespaces": { "openFiles": ["README.md", "main.py"] },
     "vscode": {
       "extensions": ["ms-python.python", "ms-python.vscode-pylance"],
-      "settings": {
-        "python.defaultInterpreterPath": ".venv/bin/python"
-      }
+      "settings": { "python.defaultInterpreterPath": ".venv/bin/python" }
     }
   },
-  "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo xargs -r apt install -y < packages.txt; python3 -m venv .venv && . .venv/bin/activate && pip install --upgrade pip && if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install streamlit; fi; echo '✅ Env ready'",
+  "updateContentCommand": "sudo apt update && sudo apt install -y tesseract-ocr tesseract-ocr-fra && python3 -m venv .venv && . .venv/bin/activate && pip install --upgrade pip && if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install streamlit; fi; echo '✅ Env ready'",
   "postAttachCommand": "bash -lc '. .venv/bin/activate && streamlit run main.py'",
   "portsAttributes": {
     "8501": { "label": "Streamlit", "onAutoForward": "openPreview" },
